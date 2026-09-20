@@ -20,18 +20,18 @@ HOW TO FILL THIS FILE
 
 | Field | Value |
 |---|---|
-| Team ID (from dashboard) | `<HM1-XXXX>` |
-| Team Name | `<team name>` |
-| College(s) | `<college name(s)>` |
-| Team Leader | `<name>` · `<email>` · `<phone>` |
+| Team ID (from dashboard) | `HM26-094A` |
+| Team Name | `Aurors` |
+| College(s) | `VTU Mysore` |
+| Team Leader | `Jai Ganesh` · `<jaig23165@gmail.com>` · `<8123178119>` |
 | Repository | `https://github.com/adinathkk007-droid/hackmysuru_followthrough` |
 
 | # | Member | Program & Year | GitHub Handle | Primary Role |
 |---|---|---|---|---|
-| 1 | `<name>` (Lead) | `<B.E. CSE, 3rd yr>` | `@<handle>` | `<backend / ML / frontend / ...>` |
-| 2 | `<name>` | `<...>` | `@<handle>` | `<...>` |
-| 3 | `<name>` | `<...>` | `@<handle>` | `<...>` |
-| 4 | `<name>` | `<...>` | `@<handle>` | `<...>` |
+| 1 | `Jai Ganesh` (Lead) | `<B.E. ECE, 2rd yr>` | `@<handle>` | `<backend / ML / frontend / ...>` |
+| 2 | `<Adinath>` | `<...>` | `@<handle>` | `<...>` |
+| 3 | `<Aakash P>` | `<...>` | `@<handle>` | `<...>` |
+| 4 | `<Vedanth>` | `<...>` | `@<handle>` | `<...>` |
 
 ---
 
@@ -61,16 +61,10 @@ HOW TO FILL THIS FILE
 
 | # | Artifact | Google Drive Link | File Name | SHA-256 (first 16 chars) |
 |---|---|---|---|---|
-| 1 | [Pitch + Code Walkthrough Video](./resource-templates/video-guide.md) (≤ 10 min, MP4) | `<https://drive.google.com/file/d/.../view>` | `<TeamID>_video.mp4` | `<a1b2c3d4e5f60718>` |
-| 2 | [Decision Log](./resource-templates/decision-log-template.md) (1 page, PDF) | `<https://drive.google.com/file/d/.../view>` | `<TeamID>_decision-log.pdf` | `<...>` |
-| 3 | [Presentation](./resource-templates/presentation-template.md) (≤ 10 slides, PDF) | `<https://drive.google.com/file/d/.../view>` | `<TeamID>_presentation.pdf` | `<...>` |
+| 1 | [Pitch + Code Walkthrough Video](./resource-templates/video-guide.md) (≤ 10 min, MP4) | `https://drive.google.com/file/d/11nYF-rjGJafFHSGxsSGV5YTPubC89qk-/view?usp=drivesdk` | `<TeamID>_video.mp4` | `<a1b2c3d4e5f60718>` |
+| 2 | [Decision Log](./resource-templates/decision-log-template.md) (1 page, PDF) | `https://drive.google.com/file/d/1Tz_NEUdfVnNCRml4R73cfR_PBjwYIxcM/view?usp=drivesdk` | `<TeamID>_decision-log.pdf` | `<...>` |
+| 3 | [Presentation](./resource-templates/presentation-template.md) (≤ 10 slides, PDF) | `https://drive.google.com/file/d/1-E1Axz7Vona_APGKiin6ZalnlkGsjdZM/view?usp=drivesdk` | `<...>` |
 
-<!--
-Get the hash:
-  macOS / Linux : shasum -a 256 <file>      (or sha256sum <file>)
-  Windows       : certutil -hashfile <file> SHA256
-Paste the first 16 characters.
--->
 
 ### Video Chapters
 
