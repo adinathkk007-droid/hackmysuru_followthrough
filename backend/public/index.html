@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Civic Follow-through — API Preview</title>
+<style>
+:root{font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;color:#e9eef5;background:#0b1016}
+*{box-sizing:border-box}body{margin:0}header{padding:24px 6%;border-bottom:1px solid #25303b;background:#0f151c}
+h1{margin:0 0 8px;font-size:28px}p{color:#9ba8b5}.wrap{max-width:1180px;margin:auto;padding:28px 6%}
+.grid{display:grid;grid-template-columns:1.25fr .75fr;gap:20px}.card{background:#111922;border:1px solid #25303b;border-radius:16px;padding:20px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.stat{padding:16px;border-radius:12px;background:#0d141c;border:1px solid #25303b}.num{font-size:28px;font-weight:800;margin-top:5px}
+.complaint{padding:16px;border:1px solid #25303b;border-radius:12px;margin-top:12px;background:#0d141c}.row{display:flex;justify-content:space-between;gap:12px}.badge{border-radius:999px;padding:5px 10px;font-size:12px;font-weight:700;background:#203447;color:#a9d8ff}
+.high{background:#47272a;color:#ffb8bd}.green{background:#19382c;color:#a8f1c8}.timeline{border-left:2px solid #2b3b49;padding-left:18px;margin-left:8px}.event{position:relative;margin:18px 0}.event:before{content:"";position:absolute;left:-25px;top:3px;width:10px;height:10px;border-radius:50%;background:#65d6a0}
+small{color:#82909d}code{color:#a9d8ff}@media(max-width:800px){.grid{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}}
+</style>
+</head>
+<body>
+<header>
+  <h1>🏛️ Civic Governance & Clean Mysuru</h1>
+  <p>Follow-through backend preview · Supabase-backed API architecture</p>
+</header>
+<div class="wrap">
+  <div class="stats">
+    <div class="stat"><small>Total complaints</small><div class="num">7</div></div>
+    <div class="stat"><small>In progress</small><div class="num">2</div></div>
+    <div class="stat"><small>Resolved</small><div class="num">1</div></div>
+    <div class="stat"><small>High risk</small><div class="num">3</div></div>
+  </div>
+  <div class="grid" style="margin-top:20px">
+    <section class="card">
+      <div class="row"><div><h2>Complaint #CM-1042</h2><small>Garbage not collected near Vijayanagar</small></div><span class="badge high">HIGH RISK</span></div>
+      <div class="complaint">
+        <div class="row"><strong>Status</strong><span class="badge">IN_PROGRESS</span></div>
+        <p>Household garbage has not been collected for four days.</p>
+        <small>📍 Vijayanagar, Mysuru · Priority: HIGH</small>
+      </div>
+      <h3>Follow-through timeline</h3>
+      <div class="timeline">
+        <div class="event"><strong>SUBMITTED</strong><br><small>Complaint submitted</small></div>
+        <div class="event"><strong>ASSIGNED</strong><br><small>Assigned to Mysuru City Corporation</small></div>
+        <div class="event"><strong>ACKNOWLEDGED</strong><br><small>Authority acknowledged the complaint</small></div>
+        <div class="event"><strong>IN_PROGRESS</strong><br><small>Field team has started inspection</small></div>
+      </div>
+    </section>
+    <aside class="card">
+      <h2>Risk assessment</h2>
+      <div style="font-size:46px;font-weight:800">82</div>
+      <span class="badge high">HIGH</span>
+      <ul>
+        <li>High priority issue</li>
+        <li>Complaint is stale</li>
+      </ul>
+      <hr style="border-color:#25303b">
+      <h3>API endpoints</h3>
+      <p><code>POST /api/complaints</code></p>
+      <p><code>GET /api/complaints</code></p>
+      <p><code>PATCH /api/complaints/:id/status</code></p>
+      <p><code>GET /api/complaints/:id/history</code></p>
+      <p><code>GET /api/complaints/:id/risk</code></p>
+    </aside>
+  </div>
+  <p style="margin-top:22px"><small>This is a UI preview. The actual API connects to your Supabase project after environment variables and the SQL schema are configured.</small></p>
+</div>
+</body>
+</html>

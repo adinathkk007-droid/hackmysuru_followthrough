@@ -1,0 +1,3 @@
+-- Demo data is intentionally not inserted here because citizen_id and
+-- changed_by should correspond to real Supabase Auth users.
+-- Use `npm run seed` after configuring SUPABASE_SERVICE_ROLE_KEY.
