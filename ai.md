@@ -1,85 +1,83 @@
 # AI Usage Disclosure
 
-[← Back to README](./README.md)
-
-> AI tools are **100% permitted** at HackMysuru 1.0. Disclosing them is **mandatory**.
-> Using AI never costs you points. Not being able to explain code you submitted does.
-> Reviewers check this file against your commit history and the AI segment of your video.
-
-<!--
-This file covers two different things. Keep them separate:
-  Section 1: AI tools YOU used while building (ChatGPT, Copilot, Cursor, Claude, v0, ...)
-  Section 3: AI models your PRODUCT uses at runtime (vision model, LLM classifier, ...)
-If you used no AI at all, say so explicitly in the Summary and delete the rest.
--->
-
----
-
 ## Summary
 
 | Question | Answer |
 |---|---|
-| Did we use AI tools during development? | `<Yes / No>` |
-| Does our product use AI/ML at runtime? | `<Yes / No>` |
-| Roughly how much of the code was AI-assisted? | `<e.g. ~40% of frontend, ~15% of backend, 0% of routing logic>` |
-| Can every team member explain the AI-assisted code? | `<Yes>` |
-
----
+| Did we use AI during development? | Yes |
+| Does our product use AI/ML at runtime? | No |
+| How was AI used? | Development assistance, debugging, architecture discussion, documentation and implementation support |
+| Can the team explain the AI-assisted implementation? | Yes |
 
 ## 1. AI Tools Used During Development
 
-| Tool | Model / plan | Used by | What we used it for |
-|---|---|---|---|
-| `<ChatGPT>` | `<GPT-x, free>` | `<@handle>` | `<Debugging CORS errors, regex for phone validation>` |
-| `<GitHub Copilot>` | `<...>` | `<@handle, @handle>` | `<Autocomplete in React components>` |
-| `<Cursor / Claude / v0 / ...>` | `<...>` | `<...>` | `<...>` |
+| Tool | Used for |
+|---|---|
+| ChatGPT | Architecture discussion, implementation assistance, debugging, code review, documentation and troubleshooting |
+
+AI assistance was used as a development aid. Final implementation decisions and integration were reviewed by the team.
 
 ## 2. Where AI Helped in the Codebase
 
-| Area / file | Level of AI help | What a human did |
+| Area | AI Assistance | Human Responsibility |
 |---|---|---|
-| `src/<frontend/components/>` | `<High: scaffolded by v0>` | `<Rewrote state handling, added offline queue>` |
-| `src/<api/routes.py>` | `<Medium: Copilot suggestions>` | `<Designed endpoints, wrote validation>` |
-| `src/<routing/engine.py>` | `<None>` | `<Written by hand, core logic>` |
-| `<README / docs>` | `<...>` | `<...>` |
+| Frontend | UI implementation and debugging assistance | Reviewed and integrated by the frontend team |
+| Backend | API and service implementation assistance | Reviewed and tested by the backend team |
+| Risk Engine | Logic discussion and implementation assistance | Risk rules were reviewed and finalized by the team |
+| Documentation | README, resource documentation and decision-log assistance | Final content reviewed by the team |
 
-**Commit convention (optional, recommended):** commits containing substantial AI-generated code are tagged `[ai]` in the message, e.g. `feat: ward status page [ai]`.
+AI-generated suggestions were not treated as automatically correct. The team reviewed, modified and tested the resulting implementation.
 
-## 3. AI Inside the Product (runtime)
+## 3. AI Inside the Product
 
-<!-- Delete this section if your product uses no AI/ML at runtime. -->
+No LLM or trained machine-learning model is used at runtime in the Phase 1 public MVP.
 
-| Model / API | What it does in our product | Hosted where | Trained / fine-tuned by us? |
-|---|---|---|---|
-| `<YOLOv8n>` | `<Detects overflowing bins in photos>` | `<On server / on device>` | `<Fine-tuned on 300 labelled images>` |
-| `<LLM API>` | `<Classifies complaint text into issue types>` | `<Provider API>` | `<No, prompt only>` |
+The follow-through risk engine is a transparent, deterministic, rules-based Python implementation.
 
-- **Accuracy we measured:** `<e.g. 82% precision on 50 held-out images>` (or "not measured yet")
-- **What happens when the model is wrong:** `<fallback, human review, confidence threshold>`
-- **Does it work offline?** `<...>`
-- **Citizen data sent to third parties:** `<none / what, and why>`
-- **Cost at city scale:** `<rough estimate, or "unknown">`
+It considers factors such as:
 
-## 4. Key Prompts (optional, max 5)
+- Complaint age
+- Inactivity
+- Priority
+- Historical resolution information
+- Authority workload
+- Repeated delays
 
-<!-- Only prompts that shaped a real design or code decision. Not a full chat log. -->
+The engine produces a 0–100 risk score, a risk level, and human-readable reasons.
 
-| # | Prompt (short) | What we kept | What we changed or rejected |
-|---|---|---|---|
-| 1 | `<"Suggest a schema for complaints with geo-dedup">` | `<Table layout>` | `<Replaced lat/lng floats with PostGIS geography>` |
+Therefore, the product does not claim trained ML prediction accuracy.
 
-## 5. How We Verified AI Output
+## 4. Key AI-Assisted Development Areas
 
-- `<e.g. Every AI-generated function was run against our seed data before merging>`
-- `<e.g. Rejected suggestions that stored photos in the database as base64>`
-- `<Example of a bug an AI tool introduced and how we caught it>`
+AI assistance was used for:
 
-## 6. What We Deliberately Did *Not* Use AI For
+1. Discussing the overall system architecture.
+2. Designing and debugging frontend workflows.
+3. Developing and troubleshooting backend API functionality.
+4. Discussing the explainable risk-engine implementation.
+5. Debugging integration issues.
+6. Preparing project documentation and submission materials.
 
-- `<e.g. The Decision Log — written by the team in our own words>`
-- `<e.g. The jurisdiction routing rules>`
+The team retained responsibility for the final architecture, implementation decisions, testing and integration.
 
----
+## 5. Verification of AI-Assisted Work
 
-**Declaration:** We confirm this disclosure is complete, and every team member can explain the code listed above.
-**Signed:** `<Team Leader name>` on behalf of `<Team Name>` · `<date>`
+AI-assisted code and suggestions were reviewed by the team before being incorporated.
+
+The implementation was checked against the project requirements and tested through the working MVP and development environment.
+
+The team also reviewed the complaint lifecycle, risk logic and frontend workflows to ensure that the implementation matched the intended system behaviour.
+
+## 6. What We Deliberately Did Not Use AI For
+
+The final product does not use an LLM or trained ML model to make runtime decisions.
+
+The follow-through risk mechanism was deliberately implemented as a rules-based system so that its output is deterministic, explainable and suitable for the limited real-world dataset available during Phase 1.
+
+## Declaration
+
+We confirm that this disclosure accurately describes the use of AI during development and that the team can explain the implementation and decisions represented in the project.
+
+**Team:** Aurora  
+**Team ID:** HM26-094A  
+**Date:** 20 September 2026
