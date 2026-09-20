@@ -24,7 +24,7 @@ HOW TO FILL THIS FILE
 | Team Name | `<team name>` |
 | College(s) | `<college name(s)>` |
 | Team Leader | `<name>` · `<email>` · `<phone>` |
-| Repository | `<https://github.com/org-or-user/repo>` |
+| Repository | `https://github.com/adinathkk007-droid/hackmysuru_followthrough` |
 
 | # | Member | Program & Year | GitHub Handle | Primary Role |
 |---|---|---|---|---|
@@ -93,7 +93,7 @@ Paste the first 16 characters.
 
 | Field | Value |
 |---|---|
-| Live URL | `<https://...>` |
+| Live URL | `https://hackmysuru-followthrough.vercel.app` |
 | Platform | `<Web / PWA / Android APK link on Drive / ...>` |
 | Test login (if any) | Citizen: `<user / pass>` · Staff: `<user / pass>` · Admin: `<user / pass>` |
 | Sample data loaded? | `<Yes — 120 synthetic complaints across 6 wards>` |
